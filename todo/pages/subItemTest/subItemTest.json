@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "subItemTest",
+  "usingComponents": {
+    "sub-items": "/components/sub-items/sub-items"
+  }
+}

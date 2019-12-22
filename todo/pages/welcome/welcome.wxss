@@ -1,0 +1,14 @@
+/* pages/welcome/welcome.wxss */
+@import "../../assets/wxss/todo.wxss";
+@import "../../assets/wxss/mytodotest.wxss";
+
+.todo-add {
+  position: absolute;
+  left: 50%;
+  top: 70%;
+}
+
+._tltle{
+  position: absolute;
+  top: 10%;
+}

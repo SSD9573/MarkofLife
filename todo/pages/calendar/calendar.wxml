@@ -1,0 +1,58 @@
+<view class="selected_date">
+  <view bindtap="preMonth">
+    <image class="select_icon" src="../../assets/images/left.png"></image>
+  </view>
+  <view class="text_center">{{curYear+'-'+curMonth}}</view>
+  <view style="text-align:right;" bindtap="nextMonth">
+    <image class="select_icon" src="../../assets/images/right.png"></image>
+  </view>
+</view>
+<view class="calendar_panel">
+  <view class="calendar_box">
+    <view class="weekday_label">日</view>
+    <view class="weekday_label">一</view>
+    <view class="weekday_label">二</view>
+    <view class="weekday_label">三</view>
+    <view class="weekday_label">四</view>
+    <view class="weekday_label">五</view>
+    <view class="weekday_label">六</view>
+  </view>
+  <view class="calendar_box" wx:for="{{dateList}}" wx:for-item="week" wx:key="{{index}}">
+    <view class="weekday_label" wx:for="{{week}}" wx:key="index">
+      <text class="{{item.value==selectedDate?'active_date':''}}" bindtap="selectDate" data-date="{{item}}">{{item.date}}</text>
+    </view>
+  </view>
+</view>
+
+
+<view wx:if="{{true}}">
+  <order-by bindtap="handOrderTap" id="fuck" orders="{{orders}}" bindOrderBy="handleOrderBy"></order-by>
+</view>
+
+<!-- <view class="show_box">选中日期：{{selectedDate}} {{selectedWeek}}</view> -->
+<view class="page">
+  <view class="todo-list">
+    <view class="todo-header">
+      进行中
+    </view>
+    <view wx:for="{{ todos }}" wx:key="{{ index }}" wx:if="{{ !item.completed }}" class="todo-list__item ripple fast fadeInRight" style="animation-delay: {{ delay ? index * 0.1 : 0 }}s">
+      <todo-item class="todo-item" todo="{{ item }}" data-index="{{ index }}" disAbled="false" bindchange="handleTodoItemChange" bindlongpress="handleTodoLongTap" bindtap="handleTap">
+      </todo-item>
+    </view>
+    <view class="ripple bounceIn" wx:if="{{!uncompletedCount}}">
+      <tips-info text="太棒了，你的任务已全部完成啦！">
+      </tips-info>
+    </view>
+  </view>
+  <view wx:if="{{ completedCount }}" class="todo-list">
+    <view class="todo-header">
+      已完成
+    </view>
+    <view wx:for="{{ todos }}" wx:key="{{ index }}" wx:if="{{ item.completed }}" class="todo-list__item ripple fast fadeInRight" style="animation-delay: {{ delay ? index * 0.1 : 0 }}s">
+      <todo-item class="todo-item" todo="{{ item }}" data-index="{{ index }}" disAbled="false" bindchange="handleTodoItemChange" bindlongpress="handleTodoLongTap">
+      </todo-item>
+    </view>
+  </view>
+  <view class="todo-add" bindtap="handleAddTodo">+</view>
+   <view class="gan" bindtap="backback">Back</view>
+</view>

@@ -1,0 +1,6 @@
+<!--pages/planList/planList.wxml-->
+<view class='page'>
+<view class='plan-item' wx:for="{{plans}}" wx:for-item="plan" wx:key="{{index}}" bindtap='handleItemTap' data-uuid="{{plan.uuid}}">
+{{plan.title}}
+</view>
+</view>

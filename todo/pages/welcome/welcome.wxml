@@ -1,0 +1,7 @@
+<!--pages/welcome/welcome.wxml-->
+<view class="todo-add" bindtap="handleAddTodo">+</view>
+<!--快捷添加日程实现-->
+<image style="width: 300px; height: 300px; margin:10px;" mode="scaleToFill" src="{{_title}}" bindtouchstart="touchStart" 
+bindtouchmove="touchMove" 
+bindtouchend="touchEnd" class="_title"></image>
+<!--启动图功能实现-->

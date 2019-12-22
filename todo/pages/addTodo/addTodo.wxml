@@ -1,0 +1,93 @@
+<!--pages/addTodo/addTodo.wxml-->
+<view class="page">
+  <view class="field-set">
+    <view class="create-header">
+      <todo-item todo="{{ todo }}" bindchange="handleTodoItemChange" auto-focus>
+      </todo-item>
+    </view>
+    <view class="field-item">
+      <label class="field-label">优先级</label>
+      <label class="field-control">
+        <picker class="w-full" range="{{ levels }}" value="{{ todo.level - 1 }}" bindchange="handleLevelChange">
+          {{ levels[todo.level - 1] }}
+        </picker>
+      </label>
+    </view>
+    <view class="field-item">
+      <label class="field-label">类别</label>
+      <label class="field-control">
+        <picker class="w-full" range="{{ categories}}" value="{{ todo.category - 1 }}" bindchange="handleCategoryChange">
+          {{ categories[todo.category - 1] }}
+        </picker>
+      </label>
+    </view>
+    <view class="field-item">
+      <label class="field-label">目标</label>
+      <label class="field-control">
+        <picker class="w-full" range="{{ targetsTitles }}" value="{{ targetIndex }}" bindchange="handleTargetChange">
+          {{ targetsTitles[targetIndex] }}
+        </picker>
+      </label>
+    </view>
+    <view class="field-item">
+      <label class="field-label">计划</label>
+      <label class="field-control">
+        <picker class="w-full" range="{{ plansTitles }}" value="{{ planIndex }}" bindchange="handlePlanChange">
+          {{ plansTitles[planIndex] }}
+        </picker>
+      </label>
+    </view>
+    <view class="field-item">
+      <label class="field-label">重要程度</label>
+      <label class="field-control">
+        <picker class="w-full" range="{{ weights}}" value="{{todo.weight - 1}}" bindchange="handleCategoryChange">
+          {{ todo.weight }}
+        </picker>
+      </label>
+    </view>
+    <view class="field-item">
+      <label class="field-label">开始时间</label>
+      <label class="field-control time-picker">
+        <picker class="w-full todo-item__date" mode="date" bindchange="handleBeginDateChange">
+          {{beginDate ? beginDate:"日期"}}
+        </picker>
+      </label>
+      <label class="field-control">
+        <picker class="w-full todo-item__time" mode="time" bindchange="handleBeginTimeChange">
+          {{beginTime ? beginTime:"时间"}}
+        </picker>
+      </label>
+    </view>
+    <view class="field-item">
+      <label class="field-label">截止时间</label>
+      <label class="field-control time-picker">
+        <picker class="w-full todo-item__date" mode="date" bindchange="handleEndDateChange">
+          {{endDate ? endDate:"日期"}}
+        </picker>
+      </label>
+      <label class="field-control">
+        <picker class="w-full todo-item__time" mode="time" bindchange="handleEndTimeChange">
+          {{endTime ? endTime:"时间"}}
+        </picker>
+      </label>
+    </view>
+    <view class="field-item">
+      <label class="field-label">描述</label>
+      <label class="field-control">
+        <textarea class="field-input w-full textarea" placeholder="任务描述..." bindinput="handleDescChange">
+        </textarea>
+      </label>
+    </view>
+    <view class="field-item bottom-button">
+      <view class="button-group" style='width:100%'>
+        <button class="button" bindtap="handleCancelTap">取消</button>
+        <button class="button button-primary" bindtap="handleSaveTap">保存</button>
+      </view>
+    </view>
+    <view class='field-item bottom-button'>
+      <view class="button-group" style="width:100%">
+        <button class="button button-delete" bindtap="handleDeleteTap">删除</button>
+      </view>
+    </view>
+  </view>
+</view>

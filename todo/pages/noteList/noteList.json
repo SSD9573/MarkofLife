@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "注释",
+  "usingComponents": {
+    "note-card": "/components/note-card/note-card",
+    "tips-info": "/components/tips-info/tips-info"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "新建目标",
+  "usingComponents": {
+    "sub-items": "/components/sub-items/sub-items"
+  }
+}

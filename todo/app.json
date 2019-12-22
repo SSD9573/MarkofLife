@@ -1,0 +1,92 @@
+{
+  "pages": [
+    "pages/welcome/welcome",
+    "pages/index/index",
+    "pages/home/home",
+    "pages/calendar/calendar",
+    "pages/me/me",
+    "pages/todoList/todoList",
+    "pages/logs/logs",
+    "pages/history/history",
+    "pages/settings/settings",
+    "pages/share/share",
+    "pages/statistics/statistics",
+    "pages/synchronization/synchronization",
+    "pages/addTodo/addTodo",
+    "pages/testChart/testChart",
+    "pages/monthList/monthList",
+    "pages/dayList/dayList",
+    "pages/lifeList/lifeList",
+    "pages/planList/planList",
+    "pages/yearList/yearList",
+    "pages/weekList/weekList",
+    "pages/fourQuadrant/fourQuadrant",
+    "pages/timerShaft/timerShaft",
+    "pages/fqTodoItemTest/fqTodoItemTest",
+    "pages/about/about",
+    "pages/addNote/addNote",
+    "pages/targetList/targetList",
+    "pages/noteList/noteList",
+    "pages/addPlan/addPlan",
+    "pages/addTarget/addTarget",
+    "pages/touchTest/touchTest",
+    "pages/animationTest/animationTest",
+    "pages/testAnimation/testAnimation",
+    "pages/todoCard/todoCard",
+    "pages/subItemTest/subItemTest",
+    "pages/test/test",
+    "pages/testLeanCloud/testLeanCloud" 
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#888888",
+    "navigationBarTitleText": "日·迹 记录你的生活",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#888888",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/todoList/todoList",
+        "text": "todo",
+        "iconPath": "assets/images/todolist_black.png",
+        "selectedIconPath": "assets/images/todolist_green.png"
+      },
+      {
+        "pagePath": "pages/noteList/noteList",
+        "text": "note",
+        "iconPath": "assets/images/note_black.png",
+        "selectedIconPath": "assets/images/note_green.png"
+      },
+      {
+        "pagePath": "pages/calendar/calendar",
+        "text": "home",
+        "iconPath": "assets/images/homepage_black.png",
+        "selectedIconPath": "assets/images/homepage_green.png"
+      },
+      {
+        "pagePath": "pages/targetList/targetList",
+        "text": "target",
+        "iconPath": "assets/images/target_black.png",
+        "selectedIconPath": "assets/images/target_green.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "me",
+        "iconPath": "assets/images/emoji_black.png",
+        "selectedIconPath": "assets/images/emoji_green.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false,
+  "sitemapLocation": "sitemap.json"
+}
